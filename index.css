@@ -1,52 +1,7 @@
-/* div .lab1 {
-    font-family: 'Courier New';
-    font-weight: bold;
-}
-
-.btn {
-    border: none;
-    background-color: white;
-    border-radius: 20px;
-    padding: 10px 16px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.btn-dark:hover {
-    background-color: #e6dddf;
-    color: black;
-}
-
-.btn-danger {
-    background-color: #e60023;
-    color: white;
-}
-.btn-gray {
-    min-height: 78px;
-    background-color: rgb(175, 170, 170);
-    border-radius: 20px;
-    padding: 14px 16px;
-    font-size: 14px;
-}
-.btn-gray:hover {
-    background-color: rgb(148, 140, 140);
-    color: black;
-}
-*/
-nav {
-    color: black;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    overflow-x: hidden;
-}
+/* Existing Pinterest styles */
+nav { color: black; }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; overflow-x: hidden; }
 
 .navbar {
     position: sticky;
@@ -55,18 +10,13 @@ body {
     background-color: white;
 }
 
-.navbar-nav .nav-link {
-    color: black;
-    font-family: sans-serif;
-}
-
+.navbar-nav .nav-link { color: black; font-family: sans-serif; }
 .navbar-nav .nav-link:hover {
     background-color: #969292;
     border-radius: 20px;
     padding-left: 16px;
     padding-right: 16px;
 }
-
 .navbar-nav .login-button {
     color: white;
     background-color: #e60023;
@@ -76,12 +26,7 @@ body {
     margin-left: 24px;
     margin-right: 24px;
 }
-
-.navbar-nav .login-button:hover {
-    color: white;
-    background-color: #e60023;
-}
-
+.navbar-nav .login-button:hover { color: white; background-color: #e60023; }
 .navbar-nav .signup-button {
     color: black;
     background-color: #a3a0a0;
@@ -89,19 +34,7 @@ body {
     padding-left: 16px;
     padding-right: 16px;
 }
-
-.navbar-nav .signup-button:hover {
-    color: black;
-    background-color: #bebcbc;
-}
-
-.home-link {
-    display: flex;
-    align-items: center;
-    height: 90px;
-    font-size: 32px;
-    font-weight: 600;
-}
+.navbar-nav .signup-button:hover { color: black; background-color: #bebcbc; }
 
 .pinterest-hero {
     display: flex;
@@ -111,13 +44,7 @@ body {
     width: min(100% - 32px, 1280px);
     margin: 0 auto;
 }
-
-.pinterest-copy {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
+.pinterest-copy { display: flex; flex-direction: column; align-items: flex-start; }
 .pinterest-heading {
     margin: 0;
     position: relative;
@@ -127,19 +54,8 @@ body {
     font-weight: 700;
     line-height: 1.06;
 }
-
-.pinterest-heading-text {
-    color: black;
-    display: block;
-    line-height: 1.1;
-    font-family: inherit;
-}
-
-.pinterest-hero-image {
-    display: block;
-    width: min(52%, 720px);
-    height: auto;
-}
+.pinterest-heading-text { color: black; display: block; line-height: 1.1; }
+.pinterest-hero-image { display: block; width: min(52%, 720px); height: auto; }
 
 .ideas-heading {
     margin: 48px auto 0;
@@ -147,17 +63,13 @@ body {
     text-align: center;
     white-space: nowrap;
 }
-
 .ideas-section {
     width: 100%;
     margin: 0 auto;
     padding: 1px 16px 32px;
-    box-sizing: border-box;
     background: linear-gradient(to bottom, #eeeeee 0%, #f7f7f7 55%, #ffffff 100%);
 }
-
-.ideas-heading,
-.ideas-description {
+.ideas-heading, .ideas-description {
     width: min(100%, 700px);
     max-width: 100%;
     box-sizing: border-box;
@@ -165,66 +77,37 @@ body {
     margin-right: auto;
     text-align: center;
 }
+.ideas-description { margin-top: 1em; color: black; font-size: 16px; white-space: nowrap; }
 
-.ideas-description {
-    margin-top: 1em;
-    color: black;
-    font-size: 16px;
-    white-space: nowrap;
-}
-
-.inspiration-feature {
+.inspiration-feature, .collaboration-feature {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr);
     align-items: center;
     gap: clamp(40px, 8vw, 96px);
     width: min(100% - 48px, 900px);
     margin: 72px auto;
 }
-
-.inspiration-image-wrap,
-.collaboration-image-wrap {
+.inspiration-feature { grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr); }
+.collaboration-feature { grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1fr); }
+.inspiration-image-wrap, .collaboration-image-wrap {
     overflow: hidden;
     border-radius: 24px;
     background-color: #f0f0eb;
 }
-
-.inspiration-image,
-.collaboration-image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.inspiration-copy h2,
-.collaboration-copy h2,
-.inspiration-copy h3,
-.collaboration-copy h3 {
+.inspiration-image, .collaboration-image { display: block; width: 100%; height: auto; }
+.inspiration-copy h3, .collaboration-copy h3 {
     margin: 0 0 12px;
     color: #111111;
     font-size: clamp(28px, 4vw, 40px);
     font-family: inherit;
     font-weight: 700;
 }
-
-.inspiration-copy p,
-.collaboration-copy p {
+.inspiration-copy p, .collaboration-copy p {
     max-width: 360px;
     margin: 0 0 24px;
     color: #111111;
     font-size: 16px;
     line-height: 1.5;
 }
-
-.collaboration-feature {
-    display: grid;
-    grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1fr);
-    align-items: center;
-    gap: clamp(40px, 8vw, 96px);
-    width: min(100% - 48px, 900px);
-    margin: 72px auto;
-}
-
 .feature-pinterest-button {
     padding: 11px 18px;
     color: white;
@@ -236,17 +119,13 @@ body {
     font-weight: 600;
     cursor: pointer;
 }
-
-.feature-pinterest-button:hover {
-    background-color: #c9001f;
-}
+.feature-pinterest-button:hover { background-color: #c9001f; }
 
 .signup-section {
     min-height: 520px;
     margin-top: 96px;
-    background: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("img5.png") center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("project1/img5.png") center / cover;
 }
-
 .signup-overlay {
     display: grid;
     grid-template-columns: minmax(280px, 1fr) minmax(260px, 300px);
@@ -256,7 +135,6 @@ body {
     min-height: 520px;
     margin: 0 auto;
 }
-
 .signup-message h3 {
     margin: 0;
     color: white;
@@ -265,7 +143,6 @@ body {
     font-weight: 700;
     line-height: 1;
 }
-
 .signup-card {
     display: flex;
     flex-direction: column;
@@ -277,15 +154,7 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
 }
-
-.signup-brand {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
+.signup-brand { width: 32px; height: 32px; margin-bottom: 10px; border-radius: 50%; object-fit: cover; }
 .signup-card h2 { margin: 0; font-size: 22px; }
 .signup-card p { margin: 4px 0 14px; font-size: 11px; }
 .signup-card label { margin: 6px 0 4px; font-size: 11px; font-weight: 600; }
@@ -298,9 +167,7 @@ body {
     font-size: 12px;
 }
 .signup-card small { margin-top: 3px; color: #666666; font-size: 8px; }
-
-.signup-continue-button,
-.google-signup-button {
+.signup-continue-button, .google-signup-button {
     min-height: 28px;
     margin-top: 10px;
     border-radius: 7px;
@@ -308,7 +175,6 @@ body {
     font-weight: 600;
     cursor: pointer;
 }
-
 .signup-continue-button { color: white; background-color: #e60023; border: 0; }
 .google-signup-button { color: #111111; background-color: white; border: 1px solid #777777; }
 .signup-or { margin-top: 5px; font-size: 9px; text-align: center; }
@@ -324,7 +190,6 @@ body {
     color: white;
     background-color: #050505;
 }
-
 .footer-brand { align-self: start; font-family: Georgia, serif; font-size: 28px; font-style: italic; font-weight: 700; }
 .footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .footer-links h3 { margin: 0 0 12px; font-size: 11px; }
@@ -344,14 +209,7 @@ body {
     white-space: nowrap;
     cursor: pointer;
 }
-
-.pinterest-button-group {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 24px 0 0 80px;
-}
-
+.pinterest-button-group { display: flex; align-items: center; gap: 12px; margin: 24px 0 0 80px; }
 .account-pinterest-button {
     padding: 9px 16px;
     color: black;
@@ -363,11 +221,9 @@ body {
     white-space: nowrap;
     cursor: pointer;
 }
-
 .account-pinterest-button:hover { background-color: #d9d9d9; }
 
-.search-bar,
-.search-bar:focus { background-color: #d3d3d3 !important; }
+.search-bar, .search-bar:focus { background-color: #d3d3d3 !important; }
 .search-form { align-items: center; }
 .navbar-nav > .search-form { margin-left: 24px !important; }
 .search-input-wrapper { position: relative; }
@@ -380,7 +236,6 @@ body {
     color: black;
     transform: translateY(-50%);
 }
-
 nav form .form-control {
     width: 500px;
     height: 40px;
@@ -388,7 +243,6 @@ nav form .form-control {
     background-color: #d3d3d3;
     border-color: #d0d0d0;
 }
-
 nav form .form-control:focus { background-color: #d3d3d3; border-color: #999; }
 
 @media (max-width: 1199px) {
@@ -404,18 +258,14 @@ nav form .form-control:focus { background-color: #d3d3d3; border-color: #999; }
     .pinterest-button-group { margin-left: 0; flex-wrap: wrap; }
     .ideas-heading { font-size: 24px; }
     .ideas-description { white-space: normal; }
-    .inspiration-feature,
-    .collaboration-feature {
+    .inspiration-feature, .collaboration-feature {
         grid-template-columns: 1fr;
         width: min(100% - 32px, 520px);
         margin: 48px auto;
     }
-    .inspiration-copy,
-    .collaboration-copy { text-align: center; }
-    .inspiration-copy p,
-    .collaboration-copy p { margin-right: auto; margin-left: auto; }
-    .signup-section,
-    .signup-overlay { min-height: auto; }
+    .inspiration-copy, .collaboration-copy { text-align: center; }
+    .inspiration-copy p, .collaboration-copy p { margin-right: auto; margin-left: auto; }
+    .signup-section, .signup-overlay { min-height: auto; }
     .signup-overlay {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -435,8 +285,7 @@ nav form .form-control:focus { background-color: #d3d3d3; border-color: #999; }
     .pinterest-heading { width: 100%; font-size: clamp(30px, 9vw, 42px); }
     .pinterest-heading-text { white-space: normal; }
     .pinterest-button-group { gap: 8px; }
-    .join-pinterest-button,
-    .account-pinterest-button { padding: 8px 12px; font-size: 12px; }
+    .join-pinterest-button, .account-pinterest-button { padding: 8px 12px; font-size: 12px; }
     .ideas-section { padding-right: 12px; padding-left: 12px; }
     .ideas-heading { white-space: normal; }
     .ideas-description { font-size: 14px; }
